@@ -1,0 +1,17 @@
+services:
+  app:
+    image: nvcr.io/nvidia/pytorch:24.07-py3
+    ports:
+      - "3000:3000"
+      - "8888:8888"
+    volumes:
+      - .:/app
+    tty: true
+    ipc: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
