@@ -1,3 +1,5 @@
 open3d
 opencv-python==4.5.5.64
 flask
+pymongo
+boto3

@@ -14,3 +14,9 @@ cd build
 cmake .. -GNinja
 ninja
 ninja install
+
+cd ..
+python -m pip install ./pycolmap/
+
+cd ..
+pip install -r requirements.txt
